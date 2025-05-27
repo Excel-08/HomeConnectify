@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sub-container1">
+            <img src="IMAGES/logo.png" alt="">
+        </div>
+        <div class="sub-container2">
+            <form class="sign-up">
+                <div class="form1">
+                    <h2>Create Your Account</h2>
+                    <p>Let’s get you started on your property journey</p>
+                </div>
+                <div class="form-group-row">
+                    <input type="text" placeholder="First Name:" required>
+                    <input type="text" placeholder="Last Name:"required>
+                </div>
+                <div class="form3">
+                    <input type="email" placeholder="Email Address:"required >
+                    <input type="password" placeholder="Create Password:" required id="password">
+                    <input type="password" placeholder="Confirm Password:" required id="confirmPassword">
+                </div>
+                <button type="submit">Sign Up</button>
+                <p id="errorMessage" style="color:red;"></p>
+                <div class="checkbox">
+                    <input type="checkbox" required />
+                    <label for="agree">I agree with Homeconnectify’s, Terms of Service, Privacy Policy, and default Notification Settings
+                    </label>
+                </div>
+                <p class="signin-link"> Already have an account? <a href="#">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="JS/sign.js"></script>
+</body>
+</html>
