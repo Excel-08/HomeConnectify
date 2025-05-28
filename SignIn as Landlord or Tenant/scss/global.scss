@@ -1,0 +1,33 @@
+
+.Header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+   
+    
+}
+.back-arrow {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333;
+    
+    &:hover {
+        color: #ebedf1;
+        transform: translateX(5px);
+    }
+}
+
+.polygon {
+    width: 50%;
+    height:50%; 
+    display: block;
+    margin:0;
+    background-position-x:65;
+}
