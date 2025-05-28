@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connecti-Fi Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">
+      <img src="/images/REFINED_LOGO_JPG.png" alt="Connecti-Fi Logo">
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Properties</a></li>
+      <li><a href="#">Messages</a></li>
+      <li><a href="#">Payment</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main class="chat-layout">
+    <aside class="sidebar">
+      <div class="header">
+        <h2>Chats</h2>
+        <button class="add-btn" onclick="addChat()">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+      <div class="profile-section">
+        <img src="images/img1.jpg" alt="Profile" class="profile-pic">
+        <h3>Brooklyn Simmons</h3>
+    
+        <div class="search-bar">
+          <input type="text" placeholder="Search">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <div class="recent-chats" id="chat-list">
+        <h4>Recent Chats</h4>
+        <div class="chat-item">
+          <img src="images/Img2.jpg" alt="Floyd" class="chat-pic">
+          <div class="chat-info">
+            <span class="name">Floyd Miles</span>
+            <span class="msg">Typing...</span>
+          </div>
+          <span class="time">12:00 PM</span>
+        </div>
+    
+        <div class="chat-item">
+          <img src="images/Img3.jpg" alt="Jane Cooper" class="chat-pic">
+          <div class="chat-info">
+            <span class="name">Jane Cooper</span>
+            <span class="msg">✓ I've sent the files..</span>
+          </div>
+          <span class="time">3:30 PM</span>
+        </div>
+    
+        <div class="chat-item">
+          <img src="images/Img4.jpg" alt="Jane Jones" class="chat-pic">
+          <div class="chat-info">
+            <span class="name">Jane Jones</span>
+            <span class="msg">Are you still there?</span>
+          </div>
+          <span class="time">10:00 AM</span>
+        </div>
+    
+        <div class="chat-item">
+          <img src="images/Img2.jpg" alt="Jacob Ben" class="chat-pic">
+          <div class="chat-info">
+            <span class="name">Jacob Ben</span>
+            <span class="msg">✓ I've seen the doc...</span>
+          </div>
+          <span class="time">11:20 AM</span>
+        </div>
+    
+        <div class="chat-item">
+          <img src="images/Img3.jpg" alt="Steve Charles" class="chat-pic">
+          <div class="chat-info">
+            <span class="name">Steve Charles</span>
+            <span class="msg">Are you still there?</span>
+          </div>
+          <span class="time">1:00 PM</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="chat-container">
+      <div class="chat-header">
+          <div class="user-info">
+              <img src="images/img1.jpg" alt="Profile" class="profile-pic">
+              <div>
+                  <h3>Brooklyn Simmons</h3>
+                  <p>Last seen 2 hours ago</p>
+              </div>
+          </div>
+          <div class="call-icons">
+              <i class="fas fa-phone"></i>
+              <i class="fas fa-video"></i>
+              <i class="fas fa-ellipsis-v"></i>
+          </div>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+          <div class="message sent">
+              <img src="images/img1.jpg" alt="Profile" class="profile-pic">
+              <p>Hi Mr. Charles, just wanted to let you know I sent the rent payment for this month.</p>
+          </div>
+          <div class="message received">
+              <p>Thanks Simmons, I've received the payment. Much appreciated.</p>
+          </div>
+          <div class="message sent">
+              <img src="images/img1.jpg" alt="Profile" class="profile-pic">
+              <p>Also, I've noticed the water heater in the bathroom isn't working properly again. It's not heating up.</p>
+          </div>
+          <div class="message received">
+              <p>Ah, sorry to hear that. I'll have the plumber come by tomorrow morning to check it out.</p>
+          </div>
+          <div class="message sent">
+              <img src="/images/img1.jpg" alt="Profile" class="profile-pic">
+              <p>That would be great. Just let me know what time I can be home.</p>
+          </div>
+          <div class="message received">
+              <p>Will do. I'll confirm with him and update you shortly.</p>
+          </div>
+          <div class="message sent">
+              <p><img src="/images/img1.jpg" alt="Profile" class="profile-pic">
+              Will do. Thanks for the quick response!</p>
+          </div>
+      </div>
+      <div class="chat-input">
+          <input type="file" id="fileUpload" style="display: none;" onchange="handleFileUpload(event)">
+          <label for="fileUpload" class="file-upload"><i class="fas fa-paperclip"></i></label>
+          <input type="text" id="messageInput" placeholder="Type a message here...">
+          <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+          <i class="fas fa-smile"></i>
+          <i class="fas fa-microphone"></i>
+      </div>
+  </section>
+  </main>
+
+   <footer>
+    <div class="footer-left">
+      <img src="images/REFINED_LOGO_JPG.png" alt="Logo">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  
+    <div class="footer-center">
+      <a href="#">Home</a>
+      <a href="#">About us</a>
+      <a href="#">Contact</a>
+      <a href="#">Help center/ FAQ</a>
+      <a href="#">Report a problem</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  
+    <div class="footer-bottom">
+      Copyright 2025, All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="script.js" >
+    
+  </script>
+</body>
+</html>
