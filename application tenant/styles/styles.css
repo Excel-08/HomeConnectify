@@ -1,0 +1,112 @@
+.upload-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+@media (max-width: 480px) {
+  .upload-container {
+    padding: 1rem;
+  }
+}
+.upload-container .breadcrumb {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+.upload-container .breadcrumb strong {
+  color: #333;
+}
+.upload-container .breadcrumb strong .breadcrumb-link {
+  color: #ff6f3d;
+  text-decoration: underline;
+}
+.upload-container .breadcrumb strong .breadcrumb-link:hover {
+  opacity: 0.7;
+}
+.upload-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.upload-container p {
+  margin-bottom: 1rem;
+}
+.upload-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.upload-container .drop-area {
+  border: 2px dashed #ccc;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: #f9f9f9;
+  width: 100%;
+  min-height: 300px;
+}
+.upload-container .drop-area .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .upload-container .drop-area {
+    padding: 1.5rem;
+    min-height: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .upload-container .drop-area {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .upload-container .drop-area .icon {
+    font-size: 1.5rem;
+  }
+}
+.upload-container .drop-area button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ff6f3d;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.upload-container .drop-area .info-text {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.upload-container .button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.upload-container .button-group .cancel {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.upload-container .button-group .next {
+  background: #ff6f3d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .upload-container .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .upload-container .button-group .cancel,
+  .upload-container .button-group .next {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
