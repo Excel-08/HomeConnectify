@@ -1,0 +1,128 @@
+@import 'mixins';
+
+.upload-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+     @include respond-to(sm) {
+    padding: 1rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+
+    strong {
+      color: #333;
+
+      .breadcrumb-link {
+       color: #ff6f3d;
+       text-decoration: underline;
+  
+     &:hover {
+       opacity: 0.7;
+     }
+   }
+
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .drop-area {
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background-color: #f9f9f9;
+    width: 100%;
+    min-height: 300px;
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+         @include respond-to(md) {
+    padding: 1.5rem;
+    min-height: 200px;
+  }
+
+  @include respond-to(sm) {
+    padding: 1rem;
+    font-size: 0.9rem;
+
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+
+
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #ff6f3d;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .info-text {
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    .cancel {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .next {
+      background: #ff6f3d;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+       @include respond-to(sm) {
+    flex-direction: column;
+    align-items: stretch;
+
+    .cancel,
+    .next {
+      width: 100%;
+    }
+  }
+}
+}

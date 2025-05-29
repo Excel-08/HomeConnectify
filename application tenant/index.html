@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Application</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="upload-container">
+    <nav class="breadcrumb">
+  <span class="breadcrumb-link" data-step="landlord-profile">Landlord Profile</span> &gt;&gt;
+  <span class="breadcrumb-link" data-step="registration-fee">Registration Fee</span> &gt;&gt;
+  <span class="breadcrumb-link" data-step="verify-document">Verify Document</span> &gt;&gt;
+  <strong>Upload Apartment Information</strong>
+</nav>
+
+    <strong>Upload Apartment Information</strong>
+  </nav>
+
+  <h2>Upload Apartment Information</h2>
+  <p>Homeconnecti-Fi requires you to upload your apartment information.</p>
+
+  <label for="file-upload">Upload Your Photo/Video</label>
+
+  <div id="drop-area" class="drop-area">
+    <div class="icon">📷</div>
+    <p><strong>Drag and Drop</strong><br />Pictures Or Videos</p>
+    <p class="info-text">Your picture / video will be private until you publish your profile.</p>
+    <input type="file" id="fileElem" multiple accept="image/*,video/*" hidden />
+    <button id="fileSelect">Select files</button>
+  </div>
+
+  <div class="button-group">
+    <button class="cancel">Cancel</button>
+    <button class="next">Next</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
