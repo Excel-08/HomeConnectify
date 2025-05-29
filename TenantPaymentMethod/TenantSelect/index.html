@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Selected Page</title>
+    <link rel="stylesheet" href="./TenantSelect.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <button class="p-nav"> <a href="#">Tenant Profile</a> </button>
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <button class="p-nav"><a href="#">Homes & Apartments</a> </button>
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <button class="p-nav"> <a href="#"> Available in Lagos Island</a> </button>
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <button class="p-nav"> <a href="#"> Confirm & Pay</a> </button>
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <button class="p-nav"> <a href="#" style="color: black;">Payment Method</a>  </button>
+        </nav>
+        <main>
+            <div class="selectedOpt">
+                <a href="../TenantPaymentMethod/TenantPayOption.html"><img src="../assets/Vector (1).png" alt="go back" class="back-logo"></a>
+                <div class="leftOpt">
+                    <img src="../assets/image 5.png" alt="Bank transfer logo"  width="50" height="50">
+                    <h2>Online Bank Transfer</h2>
+                </div>
+                <div class="rightOpt">
+                    <p class="p-email">homeconnecti-fi@gmail.com</p>
+                    <p class="payAmt">Pay <span>N3,120,000</span> </p>
+                </div>
+            </div>
+            <div class="amtDetails">
+                <h3>Transfer NGN 3,120,000 to Paystack <br>Checkout</h3>
+                <div class="detailInput">
+                    <div class="bank-details">
+                        <p class="bankname">BANK NAME
+                           <br><span>Paystack-Titan</span> </p>
+                        <!-- <p class="p-name"></p> -->
+                    </div>
+                    <div class="bank-details">
+                        <p class="bankname">ACCOUNT NUMBER
+                            <br><span>0123456789</span>
+                        </p>
+
+                        <img src="../assets/Group.png" alt="copy icon" width="20" height="20" id="copyMe" onclick="copyToClipboard(this.textContent)">
+                        <!-- <p class="acctname"></p> -->
+                    </div>
+                    <div class="bank-details">
+                        <p class="bankname">AMOUNT /  7% Charges
+                             <br> <span>NGN 3,000,000.00 / 210,000.00</span></p>
+                        <!-- <p class="acctname"></p> -->
+                    </div>
+                    <div class="bank-details">
+                        <p class="bankname">TOTAL AMOUNT <br>
+                            <span>NGN 3,210,000.00</span>
+                        </p>
+
+                        <img src="../assets/Group.png" alt="copy icon" width="20" height="20" id="copyMe" onclick="copyToClipboard(this.textContent)">
+                        <!-- <p class="acctname"></p> -->
+                    </div>
+
+                    <img src="../assets/Line 9.png" alt="broken line">
+
+                    <div class="footer-detail">
+                        <p class="p-timer">This  account is for this transaction only and expires in <br>
+                            <span class="timer"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="acceptFill">I've sent the money</button>
+            <div class="btns">
+                <button class="cancel btn" onclick="window.location.href='../TenantPaymentMethod/TenantPayOption.html'">
+                    <img src="../assets/Vector (4).png" alt="cancel x" height="10" width="10">
+                    <div class="back">Cancel Payment</div>
+                </button>
+                
+                <button class="change btn" onclick="window.location.href='../TenantPaymentMethod/TenantPayOption.html'">
+                    <img src="../assets/Vector (3).png" alt="payment change" height="10" width="10">
+                    <div class="continue">Change Payment Method</button>
+                </button>            
+            </div>
+        </main>
+        <footer>
+            <p>You will get a confirmation once we receive your payment.</p>
+        </footer>
+    </div>
+
+    <div class="confirmed">
+        <div class="confirmPage">
+            <div class="successbox">
+                <img src="../assets/check Icon (1).png" alt="success icon" height="80" width="80">
+                <h2>Payment Successful</h2>
+                <p class="p-confirm">Your payment has been successfully completed </p>
+                <p class="p-redirect">You will be redirected to the home page shortly or click here to return to home page</p>
+
+                <button class="btn-home"> <a href="#">Home</a> </button>
+            </div>
+        </div>    
+    </div>
+
+    <script src="./TenantSelect.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,362 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+/* NAVIGATION */
+nav{
+    display: flex;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+nav img{
+    height: 10px;
+    width: 10px;
+}
+nav button{
+    background-color: transparent;
+    border: none;
+    color:  #A5A5A5;
+    font-size: 12px;
+    font-style: normal;
+}
+nav button a{
+    text-decoration: none;
+    color: #A5A5A5;
+}
+nav button:hover{
+    color: #323A45;
+    cursor: pointer;
+}
+
+/* MAIN */
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.amtDetails{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+    }
+.selectedOpt{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid rgba(130, 120, 120, 0.35);
+    background: #FFF;
+
+    padding: 10px;
+    position: relative;
+}
+
+.selectedOpt .back-logo{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    left: -35px;
+}
+.leftOpt{
+    display: flex;
+    align-items: center;
+}
+.leftOpt h2{
+    margin-left: 5px;
+}
+.p-email{
+    color: #A5A5A5;;
+}
+
+.payAmt{
+    text-align: end;
+    color: #A5A5A5;
+}
+.payAmt span {
+   font-weight: 700;
+   color: #375B71;
+}
+
+/* MAIN BOX */
+h3{
+    text-align: center;
+    color: #375B71;
+    margin: 10px 0px 10px 0px;
+}
+.detailInput{
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(130, 120, 120, 0.15);
+    background: #F9F9F9;
+
+    padding: 28px 39px 32px 39px;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.bankname{
+    color: #656565;
+    font-size: 12px;
+
+}
+.bankname span{
+    color: #5A5A5A;
+    font-weight: 500;
+    font-size: 16px;
+}
+.bank-details{
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.detailInput img{
+    max-width: 500px;
+}
+.footer-detail{
+    color: #A5A5A5;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+
+.acceptFill{
+    display: flex;
+    width: 100%;
+    max-width: 580px;
+    height: 45px;
+    padding: 18.174px 19.472px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 15px;
+
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    border-radius: 10px;
+    background: #F24822;
+    border: none;
+    cursor: pointer;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 100%;
+    max-width: 580px;
+    height: 45px;
+    margin-top: 10px;
+}
+.btn{
+    border-radius: 10px;
+    border: 1.3px solid #F24822;
+    background: #F9F9F9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    color: #85898B;
+    cursor: pointer;
+
+    padding: 8px;
+}
+.btn :hover{
+    background: #F24822;
+    color: rgb(17, 17, 17);
+}
+.changebtn{
+    width: 45%;
+    display: flex;
+}
+.timer{
+    color:green;
+}
+
+footer p{
+    color: #136FFB;
+    font-size: 10px;
+}
+
+.confirmed{
+    background: #FFF;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 100px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1;
+
+}
+.confirmPage{
+    border-radius: 15px;
+    border: 1.5px solid #F94144;
+    background-color: rgba(255, 255, 255, 0.185);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 150px 60px 150px;
+    gap: 20px;
+
+    text-align: center;
+    width:100%;
+    height: 80vh;
+}
+
+.confirmPage h2{
+    color: #375B71;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.confirmPage .p-confirm{
+    color: #5A5A5A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.confirmPage .p-redirect{
+    color: rgba(101, 101, 101, 0.90);
+    font-size: 12px;
+    font-weight: 500;
+}
+.confirmPage button{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: #1F252E;
+    border: none;
+}
+.successbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 300px;
+}
+.confirmPage button a{
+   text-decoration: none;
+   color:#FFFFFF;
+}
+
+@media screen and (max-width: 780px) {
+    body{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+    main{
+        height: auto;
+        display: flex;
+
+    }
+    .container{
+        width: 100%;
+        height: auto;
+    }
+    .selectedOpt{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .detailInput{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-width: 500px;
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+    .leftOpt h2{
+    margin-left: 5px;
+    font-size: 20px;
+    }
+    .changebtn{
+        width: 100%;
+    } 
+    .confirmPage{
+        padding: 20px;
+        width: 90%;
+    }
+    button, .acceptFill{
+        width:300px;
+    }
+    
+    nav{
+        width: 80%;
+        justify-content: center;
+        flex-direction: row;
+    }
+    footer p{
+    margin: 30px 0px 30px 0px;
+}
+
+}
