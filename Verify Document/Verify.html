@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Document</title>
+    <link rel="stylesheet" href="../Verify Document/Verify.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navctrl">
+            <button class="p-nav">Landlord Profile</button>
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <button class="p-nav" style="color: black;">Registration Fee</button>
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <button class="p-nav">Verify Document</button>
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <img src="../assets/Vector 556.png" alt="arrow button" class="imgnav">
+            <button class="p-nav">Upload Apartment Information</button>
+    
+        </nav>
+<!-- Main Content Here -->
+        <main>
+            <Header>
+                <h1>Verify Document</h1>
+            </Header>
+            <p class="p-under">Homeconnecti-Fi requires you to verify your ID Card and upload your C of O document.</p>
+            
+            <div class="id-verify">
+                <h2>ID Card Verification</h2>
+                <div class="dropFile">
+                    <img src="../assets/Thread.png" alt="Paper clip" height="20px" width="20px">
+
+                    <div class="file-drop-area" id="fileDropArea1">
+                        <p>Drag & drop your file here, or <span id="browseTrigger1" style="color:#FF5A3C;cursor:pointer;">Browse</span></p>
+                        <input type="file" id="fileInput1" style="display:none;">
+                        <div id="fileList1"></div>
+                        <br>
+                        <p class="size">Max Size:10MB</p>
+                    </div>
+
+                    <button class="Removebtn" id="removeBtn1">Remove</button>
+                </div>
+            </div>
+            <div class="id-verify">
+                <h2>Upload C of O Document</h2>
+                <div class="dropFile">
+                    <img src="../assets/Thread.png" alt="Paper clip" height="20px" width="20px">
+
+                    <div class="file-drop-area" id="fileDropArea2">
+                        <p>Drag & drop your file here, or <span id="browseTrigger2" style="color:#FF5A3C;cursor:pointer;">Browse</span></p>
+                        <input type="file" id="fileInput2" style="display:none;">
+                        <div id="fileList2"></div>
+                        <br>
+                        <p class="size">Max Size:10MB</p>
+                    </div>
+
+                    <button class="Removebtn" id="removeBtn2">Remove</button>
+                </div>
+            </div> 
+            <footer>
+                <button class="cancelbtn"> <a href=""> Cancel</a></button>
+                <button class="submitbtn"> <a href="../application tenant/index.html">Upload and Continue</a> </button>
+            </footer> 
+        </main>
+    </div>
+
+<script>
+function setupFileDrop(dropAreaId, inputId, browseId, listId, removeBtnId) {
+    const fileDropArea = document.getElementById(dropAreaId);
+    const fileInput = document.getElementById(inputId);
+    const browseTrigger = document.getElementById(browseId);
+    const fileList = document.getElementById(listId);
+    const removeBtn = document.getElementById(removeBtnId);
+
+    let currentFiles = [];
+
+    fileDropArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        fileDropArea.classList.add('dragover');
+    });
+
+    fileDropArea.addEventListener('dragleave', () => {
+        fileDropArea.classList.remove('dragover');
+    });
+
+    fileDropArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        fileDropArea.classList.remove('dragover');
+        currentFiles = Array.from(e.dataTransfer.files);
+        handleFiles();
+    });
+
+    browseTrigger.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', () => {
+        currentFiles = Array.from(fileInput.files);
+        handleFiles();
+    });
+
+    removeBtn.addEventListener('click', () => {
+        currentFiles = [];
+        fileInput.value = '';
+        fileList.innerHTML = '';
+    });
+
+    function handleFiles() {
+        fileList.innerHTML = '';
+        currentFiles.forEach(file => {
+            const p = document.createElement('p');
+            p.textContent = file.name;
+            fileList.appendChild(p);
+        });
+    }
+}
+
+setupFileDrop('fileDropArea1', 'fileInput1', 'browseTrigger1', 'fileList1', 'removeBtn1');
+setupFileDrop('fileDropArea2', 'fileInput2', 'browseTrigger2', 'fileList2', 'removeBtn2');
+</script>
+</body>
+</html>
