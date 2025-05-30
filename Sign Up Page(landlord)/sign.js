@@ -14,3 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.querySelector('.signup-btn').addEventListener('click', function() {
+  window.location.href = '../Landlord Profile page/index.html';
+});

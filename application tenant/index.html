@@ -38,7 +38,15 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="script.js">
+  document.querySelector('.next').addEventListener('click', function() {
+    window.location.href = '../Upload Success/.index.html';
+  });
+
+  document.querySelector('.cancel').addEventListener('click', function() {
+    window.location.href = '../application tenant/index.html';
+  });
+</script>
 
 </body>
 </html>

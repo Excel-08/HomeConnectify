@@ -69,3 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.querySelector('.submit-button').addEventListener('click', function() {
+  // Redirect to the homepage
+  window.location.href = '../homepage/index.html';
+})
